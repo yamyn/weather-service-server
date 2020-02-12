@@ -1,0 +1,1 @@
+[{"dt":1581541200,"main":{"temp":273.98,"feels_like":268.07,"temp_min":273.79,"temp_max":273.98,"pressure":1008,"sea_level":1008,"grnd_level":991,"humidity":84,"temp_kf":0.19},"weather":[{"id":804,"main":"Clouds","description":"overcast clouds","icon":"04n"}],"clouds":{"all":98},"wind":{"speed":5.3,"deg":275},"sys":{"pod":"n"},"dt_txt":"2020-02-12 21:00:00"}]

@@ -2,7 +2,7 @@ const moment = require('moment');
 
 const parsArrForResponse = (array, dataType = 'Day') => {
     const parsArray = array.map(elem => {
-        let time = moment(elem.dt_txt).format('ddd');
+        let time = moment(elem.dt_txt).format('dddd');
 
         if (dataType !== 'Day') {
             time = moment(elem.dt_txt).format('LT');

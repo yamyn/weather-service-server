@@ -1372,8 +1372,8 @@ const weat = array[0].list;
 const generateAllDaysOBJ = arr => {
     const weatherAllInfoObj = {};
     arr.reduce((acc, obj) => {
-        if (acc !== moment(obj.dt_txt).format('ddd')) {
-            acc = moment(obj.dt_txt).format('ddd');
+        if (acc !== moment(obj.dt_txt).format('dddd')) {
+            acc = moment(obj.dt_txt).format('dddd');
             weatherAllInfoObj[`${acc}`] = [];
         }
         weatherAllInfoObj[`${acc}`].push(obj);
