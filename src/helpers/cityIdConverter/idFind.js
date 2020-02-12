@@ -5,13 +5,13 @@ const idListPath = path.join(__dirname, 'id-list.json');
 const readFile = promisify(fs.readFile);
 
 const cityId = async promptCity => {
-  const idListJson = await readFile(idListPath);
-  const idListArray = JSON.parse(idListJson);
-  const searchCity = idListArray.find(
-    city => city.name.toLowerCase() === promptCity.toLowerCase(),
-  );
-  if (!searchCity) return 'Your city not found!!!';
-  return searchCity.id;
+    const idListJson = await readFile(idListPath);
+    const idListArray = JSON.parse(idListJson);
+    const searchCity = idListArray.find(
+        city => city.name.toLowerCase() === promptCity.toLowerCase(),
+    );
+    if (!searchCity) return false;
+    return searchCity.id;
 };
 
 module.exports = cityId;

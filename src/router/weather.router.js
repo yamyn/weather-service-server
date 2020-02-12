@@ -11,6 +11,10 @@ const getWeaterByQueryString = async (req, res) => {
 
     let code = 200;
     const id = await idFinder(city);
+    if (!id) {
+        res.status(404).json({ message: 'Your city not found!!!' });
+        return;
+    }
     const data = await getWeather(id);
     const weatherArr = data.list;
     dayDataGenerate(weatherArr);
