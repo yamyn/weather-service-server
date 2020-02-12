@@ -1,16 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const logger = require('morgan');
 const cors = require('cors');
 const router = require('./router/router');
 const errorsHandler = require('./middlewares/errors');
 const notFound = require('./middlewares/notFound');
 
 const port = process.env.PORT || 4000;
-const isDev = process.env.NODE_ENV === 'development';
-
-if (isDev) app.use(logger('dev'));
 
 app.use(cors('*'));
 
